@@ -1,0 +1,1 @@
+# scala-training-2018-q2

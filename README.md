@@ -124,5 +124,85 @@ Requirements:
 - Install plugin in IntelliJ: SBT
 
 
-Open IntelliJ IDEA and add the project.
+Open IntelliJ IDEA and add the project. Explain some concepts:
+
+- Sbt shell
+- Running tests in IntelliJ
+- Version Control
+- Add .gitignore
+
+### Issues, branches and pull-requests
+
+- Issues
+- Branches naming convention
+- PR specs
+
+### Standard Library
+
+Create new package called `exercises`.
+
+Road map:
+
+- Types: Classes, Objects, Case classes, Traits, Tuples, Literals and Option
+- Collections: List, Maps, Sets, Ranges, Sequences, Array, Iterables, Traversable
+- Statements: Pattern Matching, For-expression, Implicit.
+- Functions: Higher Order Functions, Partially Applied Functions, Partial Functions, Infix/Postfix Operation, Byname Parameters, Repeated Params.
+
+#### Types
+
+Create a new package called `types` in `exercises` (also in test).
+
+##### Classes
+
+- Create new object called [`classes` in `exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/types/classes.scala)
+- Create a new suite called [`ClassesSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/ClassesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/00b4ec3a64cf542e3f01c6731ead13ed8097049c)
+
+
+##### Objects
+
+- Create new object called [`objects` in `exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/types/objects.scala)
+- Create a new suite called [`ObjectsSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/ObjectsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/34564860e80966aa03ac62728d6004904bd955d0)
+
+
+##### Case classes
+
+- Create new object called [`caseclasses` in `exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/types/caseclasses.scala)
+- Create a new suite called [`CaseClassesSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/CaseclassesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/a07d95cb478879ae0b656f0da761ddd730c4bd36)
+
+
+##### Traits
+
+- Create new object called [`traits` in `exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/types/traits.scala)
+- Create a new suite called [`TraitsSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/TraitsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/8d5dcf6e50a8659bf7614ec8b52a7cee19906d53)
+
+##### Tuples
+
+- Create a new suite called [`TuplesSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/TuplesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/9ab99f9839706a0716cee6a74137c0c9d8deae5d)
+
+##### Literals
+
+- Create a new suite called [`LiteralsSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/LiteralsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/3a9e11343dd3cc31c173eb2ad1f9fcc40956c6a2)
+
+
+##### Option
+
+- Create new object called [`options` in `exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/types/options.scala)
+- Create a new suite called [`OptionsSpec` in `test.exercises.types`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/types/OptionsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/6ad3adbd0ca1868711e090c4b1febebbb902fdf6)
+
+#### Collections
+
+Create a new package called `collections` in `exercises` (also in test).
+
+##### Lists
+
+- Create new object called [`lists` in `exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/collections/lists.scala)
+- Create a new suite called [`ListsSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/ListsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/904c6fcc4b3c63412401a98bc42901b312f1fd2c)
 

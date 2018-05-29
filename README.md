@@ -2,19 +2,19 @@
 
 #### Attendees:
 
-| Name | Email |
-|--------|--------|
-| Paolo | antonio.mateo@47deg.com |
-| Juan Carlos García Ruiz	| jcgbuzon@gmail.com |
-| Javier Osuna Herrera	| javier.osunaherrera@gmail.com |
-| Carlos Gallardo Polanco	| carlosgallardopolanco@gmail.com |
-| David Corral	| david.corral@uca.es |
-| Ana Gómez	| angoglez@gmail.com |
-| Jose Gutiérrez	| gutiory@gmail.com |
-| Juan de la Cruz García | jcruzgar@gmail.com |
-| Daniel Peralta	| dani.peralta.de@gmail.com |
-| Ignacio González Sainz	| ignacio.glez.s@gmail.com |
-| José Joaquín	Arias Gómez-Calcerrada	| tatinarias@hotmail.com |
+| Name | Email | Project |
+|--------|--------|---------|
+| Paolo | antonio.mateo@47deg.com | [@AntonioMateoGomez](https://github.com/AntonioMateoGomez/my-task) |
+| Juan Carlos García Ruiz	| jcgbuzon@gmail.com | [@JCGhub](https://github.com/JCGhub/my-tasks) |
+| Javier Osuna Herrera	| javier.osunaherrera@gmail.com | [@javosuher](https://github.com/javosuher/my-tasks) |
+| Carlos Gallardo Polanco	| carlosgallardopolanco@gmail.com | [@gpcarlos](https://github.com/gpcarlos/my-tasks) |
+| David Corral	| david.corral@uca.es | [@DavidCorral94](https://github.com/DavidCorral94/my-task) |
+| Ana Gómez	| angoglez@gmail.com | [angoglez](https://github.com/angoglez/my-task) |
+| Jose Gutiérrez	| gutiory@gmail.com | [@gutiory](https://github.com/gutiory/my-task) |
+| Juan de la Cruz García | jcruzgar@gmail.com | [jdlcgarcia](https://github.com/jdlcgarcia/my-tasks) |
+| Daniel Peralta	| dani.peralta.de@gmail.com | [@DaniPeralta](https://github.com/DaniPeralta/my-task) |
+| Ignacio González Sainz	| ignacio.glez.s@gmail.com | [@ignaciogs](https://github.com/ignaciogs/MyTask) |
+| José Joaquín	Arias Gómez-Calcerrada	| tatinarias@hotmail.com | [@empiremay](https://github.com/empiremay/my-tasks) |
 
 #### Welcome email:
 

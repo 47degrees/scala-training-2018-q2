@@ -206,3 +206,39 @@ Create a new package called `collections` in `exercises` (also in test).
 - Create a new suite called [`ListsSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/ListsSpec.scala)
 - [Commit](https://github.com/47deg/scala-training-2018-q2/commit/904c6fcc4b3c63412401a98bc42901b312f1fd2c)
 
+##### Maps
+
+- Create a new suite called [`MapsSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/MapsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/3a2729ebb04de7beaec7ec8d2edea9138d7983eb)
+
+##### Sets
+
+- Create a new suite called [`SetsSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/SetsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/7dd59e0f822837b5223a2e8bd28ba2a848eb855f)
+
+
+##### Ranges
+
+- Create a new suite called [`RangesSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/RangesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/3396b1359d49164eb4fbd5f457bd4f452cd00897)
+
+##### Sequences
+
+- Create a new suite called [`SequencesSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/SequencesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/95588e4a7c1a225910d33d92a56b8ace387b97f6)
+
+
+##### Iterables
+
+- Create a new suite called [`IterablesSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/IterablesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/59c08bf4a3ab35858b48f8a1068009d37cdf2a1e)
+
+##### Traversables
+
+- Create a new suite called [`TraversablesSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/TraversablesSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/1ee3246eade3b121adeac9ab8079af3aecdc1818)
+
+
+
+
+

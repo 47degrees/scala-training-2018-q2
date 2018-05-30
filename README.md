@@ -238,7 +238,59 @@ Create a new package called `collections` in `exercises` (also in test).
 - Create a new suite called [`TraversablesSpec` in `test.exercises.collections`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/collections/TraversablesSpec.scala)
 - [Commit](https://github.com/47deg/scala-training-2018-q2/commit/1ee3246eade3b121adeac9ab8079af3aecdc1818)
 
+#### Statements
 
+Create a new package called `statements` in `exercises` (only in test).
+
+##### Pattern matching
+
+- Create a new suite called [`PatternMatchingSpec` in `test.exercises.statements`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/statements/PatternMatchingSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/24a63a03681b9144b8c556101d4c9cb0cc2f3d00)
+
+##### For expressions
+
+- Create a new suite called [`ForExpressionsSpec` in `test.exercises.statements`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/statements/ForExpressionsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/25d209a09df3c3548018fee27c3d18d9e25e3837)
+
+##### Implicits
+
+- Create a new suite called [`ImplicitsSpec` in `test.exercises.statements`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/statements/ImplicitsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/7d10cc43f245922f1840cc89a4d516fde8827ce5)
+
+#### Functions
+
+Create a new package called `functions` in `exercises` (only in test).
+
+##### High order functions
+
+- Create a new suite called [`HighOrderFunctionsSpec` in `test.exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/functions/HighOrderFunctionsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/2cfdc54e75dc584d9d8f01a803fef8e35589259d)
+
+##### Partially applied functions
+
+- Create a new suite called [`PartiallyAppliedFunctionsSpec` in `test.exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/functions/PartiallyAppliedFunctionsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/b4969e8c0ae63ad363cf82cd8ebfa81db88c08f6)
+
+##### Partial functions
+
+- Create a new suite called [`PartialFunctionsSpec` in `test.exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/functions/PartialFunctionsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/3376612e55bb5eacf7d412ead3535225c1070021)
+
+##### Infix prefix and postfix operators
+
+- Create a new suite called [`InfixPrefixandPostfixOperatorsSpec` in `test.exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/functions/InfixPrefixandPostfixOperatorsSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/34c55d0c38e9d729b2b8255083718d5e14b56ba0)
+
+##### By-name parameter
+
+- Create a new suite called [`ByNameParameterSpec` in `test.exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/functions/ByNameParameterSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/c48e39cb94eae8ead6356c2a28a33e1973f85032)
+
+##### Repeated parameters
+
+- Create new object called [`RepeatedParametersHelper` in `exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/exercises/functions/RepeatedParametersHelper.scala)
+- Create a new suite called [`RepeatedParametersSpec` in `test.exercises.functions`](https://github.com/47deg/scala-training-2018-q2/blob/master/src/test/scala/exercises/functions/RepeatedParametersSpec.scala)
+- [Commit](https://github.com/47deg/scala-training-2018-q2/commit/cfb500442af431d563937f80de2115f9bc966c93)
 
 
 

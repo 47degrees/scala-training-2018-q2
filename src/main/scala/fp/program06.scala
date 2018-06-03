@@ -1,34 +1,8 @@
 package fp
 
-import cats.Id
-import cats.data.Kleisli
 import cats.implicits._
 
 object program06 extends App {
-
-  case class Config(password: String)
-
-  case class Result(hi: String)
-
-  //def myAlgebra(r: Request): F[Response]
-
-  def myOperation(s1: String): Kleisli[Id, Config, Result] = Kleisli { c =>
-    Result(c.password ++ s1).pure[Id]
-  }
-
-
-
-
-  val myConfig = Config("Jar")
-
-  val k: Kleisli[Id, Config, Result] = myOperation("quepasa")
-  val r: Id[Result] = myOperation("quepasa").run(myConfig)
-
-
-  println(r)
-
-
-
 
   def getBank1Credentials: Option[String] = Some("MyUser_MyPassword")
 
@@ -36,12 +10,12 @@ object program06 extends App {
 
   def getBalanceBank2: Option[Int] = Some(80)
 
-  val getPocketMoney: Int = 20
+  def getPocketMoney: Int = 20
 
   def balance: Option[Int] = {
 
     val c1: Option[String] = getBank1Credentials
-    val b1: Option[Int] = c1.flatMap(getBalanceBank1(_))
+    val b1: Option[Int] = c1.flatMap(getBalanceBank1)
     val b2: Option[Int] = getBalanceBank2
 
     b1.combine(b2).combine(getPocketMoney.pure[Option])

@@ -10,14 +10,15 @@ object program04 extends App {
 
   def getBalanceBank2: Maybe[Int] = Yes(80)
 
-  val getPocketMoney: Int = 20
+  def getPocketMoney: Int = 20
 
   def balance: Maybe[Int] = {
 
     val b1: Maybe[Int] = getBalanceBank1
     val b2: Maybe[Int] = getBalanceBank2
+    val p: Maybe[Int] = getPocketMoney.pure[Maybe]
 
-    b1.combine(b2).combine(getPocketMoney.pure[Maybe])
+    b1.combine(b2).combine(p)
   }
 
   def amIRich: Maybe[Boolean] = balance.map(_ > 150)

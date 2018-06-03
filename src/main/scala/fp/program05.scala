@@ -11,7 +11,7 @@ object program05 extends App {
 
   def getBalanceBank2: Maybe[Int] = Yes(80)
 
-  val getPocketMoney: Int = 20
+  def getPocketMoney: Int = 20
 
   def balance: Maybe[Int] = {
 

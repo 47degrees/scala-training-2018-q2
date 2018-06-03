@@ -71,6 +71,13 @@ class KakuroSpec extends FlatSpec with Matchers {
     hand.solve shouldBe -1
   }
 
+  it should "be able to find the unique solution when secures are restrictive" in {
+
+    val space1 = Spaces(19, 4, Set(5, 6))
+    val space2 = Spaces(16, 4, Set(7))
+
+    Hand(space1, space2).solve shouldBe 1
+  }
 
 
 

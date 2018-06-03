@@ -293,4 +293,37 @@ Create a new package called `functions` in `exercises` (only in test).
 - [Commit](https://github.com/47deg/scala-training-2018-q2/commit/cfb500442af431d563937f80de2115f9bc966c93)
 
 
+### Functional Programming fundamentals:
 
+- Exposed the problem: [Ignoring side effects](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/program01.scala)
+- Created the [_Maybe_](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/datatypes.scala) date type to wrap non existing values
+- We need to be able to [combine](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/program03.scala)
+    - Added the [Combinator](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/typeclasses.scala#L5-L7) typeclass.
+    - Added its [instances](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/instances.scala#L8-L22) for `Int` and `Maybe`
+    - Added its [implicits](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L9-L11) instances
+    - And some [syntax](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L23-L25)
+- Exposed another problem: [We need to handle the content](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/program03.scala)
+    - Added the [Transformer](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/typeclasses.scala#L9-11) typeclass.
+    - Added its [instances](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/instances.scala#L24-L29) for `Maybe`
+    - Added its [implicits](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L13) instances
+    - And some [syntax](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L27-L29)
+- Exposed another problem: [We need to lift values](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/program04.scala)
+    - Added the [Lifter](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/typeclasses.scala#L13-15) typeclass.
+    - Added its [instances](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/instances.scala#L31-L33) for `Maybe`
+    - Added its [implicits](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L15) instances
+    - And some [syntax](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L31-L33)
+- Exposed another problem: [We need to compute operations sequentially](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/program05.scala)
+    - Added the [Flattener](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/typeclasses.scala#L17-19) typeclass.
+    - Added its [instances](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/instances.scala#L35-L40) for `Maybe`
+    - Added its [implicits](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L17) instances
+    - And some [syntax](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/implicits.scala#L35-L37)
+- Shown the [same solution](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/fp/program06.scala) using:
+    - `scala.Option` instead of `Maybe`
+    - `Some` instead of `Yes`
+    - `None` instead of `No`
+    - `cats.Semigroup` instead of `Combinator`
+    - `cats.Functor` instead of `Transformer`
+    - `cats.Applicative` instead of `Lifter`
+    - `cats.Monad` instead of `Flattener`
+
+[Commit](https://github.com/47deg/scala-training-2018-q2/commit/42d5f4c9e31dbf5cf21391e8a8ab69800310d672)

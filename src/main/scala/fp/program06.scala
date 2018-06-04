@@ -2,7 +2,7 @@ package fp
 
 import cats.implicits._
 
-object program06 extends App {
+object program06 {
 
   def getBank1Credentials: Option[String] = Some("MyUser_MyPassword")
 

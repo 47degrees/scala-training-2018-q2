@@ -2,9 +2,8 @@ package fp
 
 import fp.datatypes._
 import fp.implicits._
-import fp.typeclasses.Transformer
 
-object program03 extends App {
+object program03 {
 
 
   def getBalanceBank1: Maybe[Int] = Yes(100)

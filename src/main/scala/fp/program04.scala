@@ -3,7 +3,7 @@ package fp
 import fp.datatypes._
 import fp.implicits._
 
-object program04 extends App {
+object program04 {
 
 
   def getBalanceBank1: Maybe[Int] = Yes(100)

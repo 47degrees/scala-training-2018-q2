@@ -3,7 +3,7 @@ package fp
 import fp.datatypes._
 import fp.implicits._
 
-object program05 extends App {
+object program05 {
 
   def getBank1Credentials: Maybe[String] = Yes("MyUser_MyPassword")
 

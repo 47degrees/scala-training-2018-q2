@@ -8,5 +8,14 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "my-tasks",
-    libraryDependencies += scalaTest % Test
+    scalacOptions := Seq(
+      "-deprecation",
+      "-encoding",
+      "UTF-8",
+      "-feature",
+      "-language:existentials",
+      "-language:higherKinds",
+      "-Ypartial-unification"
+    ),
+    libraryDependencies ++= dependencies
   )

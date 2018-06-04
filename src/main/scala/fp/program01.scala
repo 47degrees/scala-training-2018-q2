@@ -1,6 +1,6 @@
 package fp
 
-object program01 extends App {
+object program01 {
 
 
   def getBalanceBank1: Int = 100

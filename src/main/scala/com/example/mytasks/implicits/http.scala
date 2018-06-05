@@ -1,19 +1,21 @@
 package com.example.mytasks.implicits
 
-import com.example.mytasks.models.User
+import com.example.mytasks.models._
 import io.circe._
-
-
+import io.circe.generic.semiauto.deriveDecoder
+import io.circe.generic.semiauto.deriveEncoder
 
 object http {
 
-//  implicit val usernameEncoder: Encoder[User] = Encoder.instance {
-//    x => Json.fromString(x.value)
-//  }
+  //Decoders
+  implicit val addUserReq: Decoder[AddUserRequest] = deriveDecoder[AddUserRequest]
+  implicit val addTaskReq: Decoder[AddTaskRequest] = deriveDecoder[AddTaskRequest]
 
-  implicit val encodeUser: Encoder[User] =
-    Encoder.forProduct2("id", "name")(u => (u.id, u.name))
 
-//  implicit val userEncoder: Encoder[User] = deriveEncoder[User]
+  //Encoders
+  implicit val encoderUser: Encoder[User] = deriveEncoder[User]
+  implicit val encoderTask: Encoder[Task] = deriveEncoder[Task]
+  implicit val encoderAddUserResponse: Encoder[AddUserResponse] = deriveEncoder[AddUserResponse]
+  implicit val encoderAddTaskResponse: Encoder[AddTaskResponse] = deriveEncoder[AddTaskResponse]
 
 }

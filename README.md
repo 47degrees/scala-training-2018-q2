@@ -327,3 +327,38 @@ Create a new package called `functions` in `exercises` (only in test).
     - `cats.Monad` instead of `Flattener`
 
 [Commit](https://github.com/47deg/scala-training-2018-q2/commit/42d5f4c9e31dbf5cf21391e8a8ab69800310d672)
+
+
+### Tagless Final and Transport layer (REST API - Http4s + Circe)
+
+- Models:
+    - [Task](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/models/Task.scala)
+    - [User](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/models/User.scala)
+    
+- Algebras:
+    - [Tasks](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/algebras/Tasks.scala)
+    - [Users](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/algebras/Users.scala)
+    
+- Interpreters:
+    - [TasksInterpreter](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/interpreters/TasksInterpreter.scala)
+    - [UsersInterpreter](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/interpreters/UsersInterpreter.scala)
+    
+- Module:
+    - [Workflow](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/modules/Workflow.scala)
+    
+- Runtime:
+    - [Implicits](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/implicits/runtime.scala)
+         
+- HttpService:
+    - [Routes](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/http/Routes.scala)
+    - [Codecs](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/implicits/http.scala)
+    - [Server](https://github.com/47deg/scala-training-2018-q2/blob/master/src/main/scala/com/example/mytasks/Server.scala)
+         
+         
+       
+    
+    
+    
+    
+    
+    

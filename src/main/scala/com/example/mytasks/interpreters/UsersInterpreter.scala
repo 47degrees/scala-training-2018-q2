@@ -1,15 +1,22 @@
 package com.example.mytasks.interpreters
 
 import cats.Applicative
-import cats.implicits._
 import com.example.mytasks.algebras.Users
 import com.example.mytasks.models.User
+import cats.implicits._
 
-class UsersInterpreter[F[_]: Applicative] extends Users[F]{
+class UsersInterpreter[F[_]: Applicative] extends Users[F] {
 
-  override def add(user: User): F[Int] = 999.pure[F]
+  var db: List[User] = Nil
 
-  override def list: F[List[User]] = List(User(888, "Rafa")).pure[F]
+  override def add(name: String): F[Int] = {
+    val newId: Int = getNextId
+    db = db ++ List(User(newId, name))
+    newId.pure[F]
+  }
 
-  override def getRandomString: F[String] = "Hi Rafa".pure[F]
+  override def list: F[List[User]] = db.pure[F]
+
+  private def getNextId: Int = db.lastOption.fold(1)(_.id + 1)
+
 }

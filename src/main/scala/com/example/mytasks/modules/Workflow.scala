@@ -5,11 +5,16 @@ import com.example.mytasks.models._
 
 trait Workflow[F[_]] {
 
+  def addUser(name: String): F[Int]
+
   def getUsers: F[List[User]]
 
-  def getTasks: F[List[Task]]
+  def addTask(userId: Int, title: String): F[Int]
 
-  def getRandomString: F[String]
+  def getTasks(userId: Int): F[List[Task]]
+
+  def asDone(id: Int): F[Boolean]
+
 
 }
 
@@ -17,11 +22,15 @@ object Workflow {
 
   def impl[F[_]](users: Users[F], tasks: Tasks[F]): Workflow[F] = new Workflow[F] {
 
-    override def getTasks: F[List[Task]] = tasks.list
+    override def addUser(name: String): F[Int] = users.add(name)
 
     override def getUsers: F[List[User]] = users.list
 
-    override def getRandomString: F[String] = users.getRandomString
+    override def addTask(userId: Int, title: String): F[Int] = tasks.add(userId, title)
+
+    override def getTasks(userId: Int): F[List[Task]] = tasks.list(userId)
+
+    override def asDone(id: Int): F[Boolean] = tasks.asDone(id)
   }
 
 }

@@ -2,8 +2,8 @@ package com.example.mytasks
 
 import cats.effect.{Effect, IO}
 import com.example.mytasks.http.Routes
-import fs2.{Stream, StreamApp}
-import fs2.StreamApp.ExitCode
+import com.example.mytasks.implicits.runtime._
+import fs2.StreamApp
 import org.http4s.server.blaze.BlazeBuilder
 
 import scala.concurrent.ExecutionContext.Implicits.global

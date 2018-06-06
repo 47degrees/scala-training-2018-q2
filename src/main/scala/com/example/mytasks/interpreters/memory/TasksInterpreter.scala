@@ -1,4 +1,4 @@
-package com.example.mytasks.interpreters
+package com.example.mytasks.interpreters.memory
 
 import cats.Applicative
 import cats.implicits._

@@ -2,7 +2,7 @@ package com.example.mytasks
 
 import cats.effect.{Effect, IO}
 import com.example.mytasks.http.Routes
-import com.example.mytasks.implicits.runtime._
+import com.example.mytasks.implicits.runtime.db._
 import fs2.StreamApp
 import org.http4s.server.blaze.BlazeBuilder
 
@@ -15,10 +15,10 @@ class HttpServer[F[_]: Effect] extends StreamApp[F] {
   def service[F[_]: Effect] = new Routes[F].service
 
   override def stream(args: List[String], requestShutdown: F[Unit]) =
-    BlazeBuilder[F]
-    .bindHttp()
-    .mountService(service, "/")
-    .serve
-
-
+    fs2.Stream.eval(Database.migrateDB[F]).flatMap(_ =>
+      BlazeBuilder[F]
+        .bindHttp()
+        .mountService(service, "/")
+        .serve
+    )
 }

@@ -1,9 +1,9 @@
-package com.example.mytasks.interpreters
+package com.example.mytasks.interpreters.memory
 
 import cats.Applicative
+import cats.implicits._
 import com.example.mytasks.algebras.Users
 import com.example.mytasks.models.User
-import cats.implicits._
 
 class UsersInterpreter[F[_]: Applicative] extends Users[F] {
 

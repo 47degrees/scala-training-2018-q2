@@ -7,6 +7,7 @@ object Dependencies {
   val DoobieVersion = "0.5.3"
   val FlywayVersion = "5.0.5"
 
+  lazy val pureconfig = "com.github.pureconfig" %% "pureconfig" % "0.9.1"
   lazy val logback = "ch.qos.logback"  %  "logback-classic" % "1.2.3"
   lazy val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
 
@@ -30,6 +31,7 @@ object Dependencies {
 
   lazy val dependencies: Seq[ModuleID] = Seq(
     logback,
+    pureconfig,
     scalaTest % Test
   ) ++ http4s ++ circe ++ database
 

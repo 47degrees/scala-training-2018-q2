@@ -1,1 +1,0 @@
-alter table tasks alter column user_id rename to userId

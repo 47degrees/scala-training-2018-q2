@@ -10,6 +10,7 @@ object Dependencies {
   lazy val pureconfig = "com.github.pureconfig" %% "pureconfig" % "0.9.1"
   lazy val logback = "ch.qos.logback"  %  "logback-classic" % "1.2.3"
   lazy val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+  lazy val scalaMock = "org.scalamock" %% "scalamock" % "4.1.0"
 
   lazy val http4s = Seq(
     "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
@@ -32,7 +33,8 @@ object Dependencies {
   lazy val dependencies: Seq[ModuleID] = Seq(
     logback,
     pureconfig,
-    scalaTest % Test
+    scalaTest % Test,
+    scalaMock % Test
   ) ++ http4s ++ circe ++ database
 
 }

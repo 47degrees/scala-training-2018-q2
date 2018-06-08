@@ -17,5 +17,7 @@ lazy val root = (project in file(".")).
       "-language:higherKinds",
       "-Ypartial-unification"
     ),
-    libraryDependencies ++= dependencies
+    libraryDependencies ++= dependencies,
+    coverageMinimum := 20,
+    coverageFailOnMinimum := true
   )

@@ -3,13 +3,18 @@ package com.example.mytasks.modules
 import cats.Id
 import com.example.mytasks.algebras._
 import com.example.mytasks.models._
+import com.example.mytasks.utils.ArbitraryInstances
 import org.scalatest._
 import org.scalamock.scalatest.MockFactory
+import org.scalatest.prop.Checkers
+import org.scalacheck.Prop.forAll
 
-class WorkflowSpec extends FlatSpec with Matchers with MockFactory {
-
-  val user1 = User(1, "Rafa")
-  val task1 = Task(1, user1.id, "Kakuro challenge")
+class WorkflowSpec extends FlatSpec
+  with Matchers
+  with Checkers
+  with MockFactory
+  with OneInstancePerTest
+  with ArbitraryInstances {
 
   val users: Users[Id] = stub[Users[Id]]
   val tasks: Tasks[Id] = stub[Tasks[Id]]
@@ -18,40 +23,57 @@ class WorkflowSpec extends FlatSpec with Matchers with MockFactory {
 
 
   "Workflow" should "be able to add new users" in {
-    val expected = user1.id
-    (users.add _).when(*).returns(expected)
 
-    module.addUser(user1.name) shouldBe expected
+    check {
+      forAll(userGen) { user =>
+        val expected = user.id
+        (users.add _).when(user.name).returns(expected)
+
+        module.addUser(user.name) === expected
+      }
+    }
   }
 
   it should "be able to retrieve the list of users" in {
-    val expected = List(user1)
-    (users.list _).when().returns(expected)
 
-    module.getUsers shouldBe expected
+    val userList: List[User] = listUserGen.sample.get
+    (users.list _).when().returns(userList)
+    module.getUsers shouldBe userList
+
   }
 
   it should "be able to add new tasks" in {
-    val expected = task1.id
-    (tasks.add _).when(*, *).returns(expected)
 
-    module.addTask(user1.id, task1.title) shouldBe expected
+    check {
+      forAll(taskGen) { task =>
+        val expected = task.id
+        (tasks.add _).when(task.userId, task.title).returns(expected)
+        module.addTask(task.userId, task.title) === expected
+      }
+    }
   }
+
 
   it should "be able to retrieve the list of tasks" in {
-    val expected = List(task1)
-    (tasks.list _).when(*).returns(expected)
 
-    module.getTasks(user1.id) shouldBe expected
+    val taskList: List[Task] = listTaskGen.sample.get
+    check {
+      forAll(userGen) { user =>
+
+        (tasks.list _).when(user.id).returns(taskList)
+        module.getTasks(user.id) === taskList
+      }
+    }
   }
+
 
   it should "be able to set a task as done" in {
-    val expected = true
-    (tasks.asDone _).when(*).returns(expected)
-
-    module.asDone(task1.id) shouldBe expected
+    check {
+      forAll(taskGen) { task =>
+        (tasks.asDone _).when(task.id).returns(true)
+        module.asDone(task.id) === true
+      }
+    }
   }
-
-
 
 }

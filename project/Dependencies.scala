@@ -11,6 +11,7 @@ object Dependencies {
   lazy val logback = "ch.qos.logback"  %  "logback-classic" % "1.2.3"
   lazy val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
   lazy val scalaMock = "org.scalamock" %% "scalamock" % "4.1.0"
+  lazy val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.14.0"
 
   lazy val http4s = Seq(
     "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
@@ -34,7 +35,8 @@ object Dependencies {
     logback,
     pureconfig,
     scalaTest % Test,
-    scalaMock % Test
+    scalaMock % Test,
+    scalaCheck % Test
   ) ++ http4s ++ circe ++ database
 
 }

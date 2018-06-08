@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/47deg/scala-training-2018-q2.svg?style=svg)](https://circleci.com/gh/47deg/scala-training-2018-q2)
+
 # Scala Training: 2018 Q2
 
 #### Attendees:
